@@ -8,10 +8,10 @@ class demographics(NbaDataProvider):
         NbaDataProvider.__init__(self, url_modifier=url_modifier, default_params=p_player_common, PlayerID=player_id)
 
     def player_info(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def headline_stats(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
 
 class career_stats(NbaDataProvider):
@@ -20,43 +20,43 @@ class career_stats(NbaDataProvider):
         NbaDataProvider.__init__(self, url_modifier=url_modifier, default_params=p_ply_career, PlayerID=player_id)
 
     def seasons_regular(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def career_regular(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
     def seasons_post(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 2)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 2)
 
     def career_post(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 3)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 3)
 
     def seasons_allstar(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 4)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 4)
 
     def career_allstar(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 5)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 5)
 
     def seasons_college(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 6)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 6)
 
     def career_college(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 7)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 7)
 
     def seasons_rankings_regular(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 8)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 8)
 
     def seasons_rankings_post(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 9)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 9)
 
     def season_high_post(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 10)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 10)
 
     def career_high_post(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 11)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 11)
 
     def next_game(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 12)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 12)
 
 
 class game_logs(NbaDataProvider):
@@ -66,7 +66,7 @@ class game_logs(NbaDataProvider):
                                  Season=season)
 
     def logs(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 class shot_dashboard(NbaDataProvider):
@@ -76,25 +76,25 @@ class shot_dashboard(NbaDataProvider):
                                  Season=season)
 
     def overall(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def general(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
     def shot_clock(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 2)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 2)
 
     def dribble(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 3)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 3)
 
     def closest_defender(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 4)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 4)
 
     def closest_defender_10ft(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 5)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 5)
 
     def touch_time(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 6)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 6)
 
 
 class rebound_dashboard(NbaDataProvider):
@@ -104,19 +104,19 @@ class rebound_dashboard(NbaDataProvider):
                                  Season=season)
 
     def overall(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def shot_type(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
     def contesting_rebounders(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 2)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 2)
 
     def shot_distance(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 3)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 3)
 
     def rebound_distanct(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 4)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 4)
 
 
 class passing_dashboard(NbaDataProvider):
@@ -126,10 +126,10 @@ class passing_dashboard(NbaDataProvider):
                                  Season=season)
 
     def passes_made(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def passes_received(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
 
 class defense_dashboard(NbaDataProvider):
@@ -139,7 +139,7 @@ class defense_dashboard(NbaDataProvider):
                                  Season=season)
 
     def defending_shot(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 class shot_chart(NbaDataProvider):
@@ -149,10 +149,10 @@ class shot_chart(NbaDataProvider):
                                  Season=season)
 
     def chart(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def leagueaverage(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
 
 class PlayerList(NbaDataProvider):
@@ -162,7 +162,7 @@ class PlayerList(NbaDataProvider):
                                  IsOnlyCurrentSeason=is_only_current_season)
 
     def players(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 # BLOCKED BY NBA
@@ -173,7 +173,7 @@ class shot_log(NbaDataProvider):
                                  Season=season)
 
     def log(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 # BLOCKED BY NBA
@@ -184,7 +184,7 @@ class rebound_log(NbaDataProvider):
                                  Season=season)
 
     def log(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 # BLOCKED BY NBA
@@ -195,25 +195,25 @@ class general_splits(NbaDataProvider):
                                  Season=season)
 
     def overall(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
     def location(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 1)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 1)
 
     def wins_losses(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 2)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 2)
 
     def month(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 3)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 3)
 
     def pre_post_allstar(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 4)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 4)
 
     def starting_position(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 5)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 5)
 
     def days_rest(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 6)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 6)
 
 
 __all__ = ["demographics", "career_stats",

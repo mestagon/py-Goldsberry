@@ -79,7 +79,7 @@ class ObjectManager(object):
 
     def _set_class_data(self):
         nba_data_response = self._get_nba_data(self.api_params)
-        self._data_tables = nba_data_response
+        self.data_tables = nba_data_response
 
     def set_api_parameters(self, **kwargs):
         for k, v in kwargs.items():
